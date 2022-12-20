@@ -5,131 +5,316 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>꽃그리는아이</title>
+    <title>i-mate mobile</title>
 
     <!--CSS-->
     <link rel="stylesheet" href="../css/m_index.css">
 
     <!-- Javascript Libraries -->
     <script src="../js/jquery-3.6.0.min.js"></script>
-    <!--<script src="../js/gsap.min.js"></script>-->
-    <!--<script src="../js/ScrollTrigger.min.js"></script>-->
-    <!--<script src="../js/jquery.fullpage.js"></script>-->
+    <script src="../js/swiper-bundle.min.js"></script>
     <script src="../js/m_script.js"></script>
 </head>
 <body>
 <div id="wrap">
     <!-- header -->
-    <header id="header" class="transparent">
-        <h1 class="logo"><a href="javascript:void(0)"><img src="../images/logo_wide_1.svg" alt="꽃그리는아이 로고"></a></h1>
-
-        <button type="button" class="ham-btn"></button>
-        <div id="moMenu">
-            <div class="menu-header">
-                <h1 class="logo"><img src="../images/logo_wide_1.svg" alt="꽃그리는아이 로고"></h1>
-                <button type="button" class="close-btn"></button>
-            </div>
-            <nav id="moNav">
-                <li><a href="javascript:void(0)">꽃그리는아이 소개</a></li>
-                <li><a href="javascript:void(0)">프로그램</a></li>
-                <li><a href="javascript:void(0)">커뮤니티</a></li>
-            </nav>
+    <header id="header">
+        <h1 class="logo"><a href="javascript:void(0)"><img src="../images/mo_ico_logo.svg" alt="i-mate 로고"></a></h1>
+        <div class="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </header>
     <!-- //header -->
 
     <!-- main -->
     <main id="main">
-        <div id="fullpage">
+        <div id="all-wrap">
             <!-- section1 -->
-            <div id="section1" class="section center">
-                <div class="inner main-full">
-                    <div class="main-bg">
-                        <div class="img01"></div>
-                        <div class="img02"></div>
-                        <div class="img03"></div>
-                    </div>
-                    <p>따뜻하고 행복한 미술프로그램<br>
-                        꽃그리는아이 입니다.</p>
-                    <span class="arrow mo first"></span>
+            <div id="section1" class="section">
+                <div class="search-txt">
+                    <p>찾으시는 제조사 또는 서비스를 검색해보세요</p>
+                </div>
+                <div class="search-input">
+                    <label for="main-search"></label>
+                    <input type="text" id="main-search" placeholder="사출금형 첫 의뢰">
+                    <!--text-align오른쪽으로-->
+                    <span><!--검색 아이콘--></span>
                 </div>
             </div>
             <!-- //section1 -->
 
             <!-- section2 -->
-            <div id="section2" class="section center">
-                <div class="inner">
-                    <div class="img-area">
-                        <img src="../images/mo_img_main_01.svg" alt="">
+            <div id="section2">
+                <!-- Slider main container -->
+                <div class="swiper mainBanner">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="javascript:void[0]">
+                                <img src="../images/mo_main_banner1_txt.svg" alt="배너텍스트">
+                                <img src="../images/mo_main_banner1_hand.svg" alt="배너이미지">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void[0]">
+                                <img src="../images/main_banner1.svg" alt="슬라이드2">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void[0]">
+                                <img src="../images/main_banner1.svg" alt="슬라이드3">
+                            </a>
+                        </div>
                     </div>
-                    <div class="txt-area">
-                        <h2 class="title">꽃그리는아이 센터</h2>
-                        <p>아이와 함께 방문하여 퍼포먼스수업과 미술수업을<br>
-                            함께 체험하는 cafe형태의 꽃그리는아이 센터입니다.</p>
-                        <button class="more-btn">자세히 보기</button>
-                        <p class="numbering"><!--fullpage-numbering-->1/3</p>
-                    </div>
-                    <span class="arrow mo"></span>
                 </div>
             </div>
             <!-- //section2 -->
 
             <!-- section3 -->
-            <div id="section3" class="section center flex">
-                <div class="inner">
-                    <span class="arrow mo"></span>
-                    <div class="txt-area">
-                        <h2 class="title">방문미술</h2>
-                        <p>교육을 수료한 미술 선생님이 직접 아이의 집에 방문<br>
-                            하여 아이와 함께 미술수업을 진행합니다.</p>
-                        <button class="more-btn">자세히 보기</button>
-                        <p class="numbering"><!--fullpage-numbering-->2/3</p>
-
-                    </div>
-                    <div class="img-area"></div>
-                </div>
+            <div id="section3">
+                <h3>간편 견적의뢰</h3>
+                <ul>
+                    <li><a href="javascript:void[0]">
+                        <img src="../images/mo_main_request_01.svg" alt="견적의뢰">
+                    </a></li>
+                    <li><a href="javascript:void[0]">
+                        <img src="../images/mo_main_request_02.svg" alt="공개게시판">
+                    </a></li>
+                    <li><a href="javascript:void[0]">
+                        <img src="../images/mo_main_request_03.svg" alt="제조사등록">
+                    </a></li>
+                </ul>
             </div>
             <!-- //section3 -->
 
+            <!--            section3과 section4 사이 회색  span-->
+
             <!-- section4 -->
-            <div id="section4" class="section center flex">
-                <div class="inner">
-                    <div class="txt-area">
-                        <h2 class="title">꼬띠박스</h2>
-                        <p>교육을 수료한 미술 선생님이 직접 아이의 집에 방문<br>
-                            하여 아이와 함께 미술수업을 진행합니다.</p>
-                        <button class="more-btn">자세히 보기</button>
-                        <p class="numbering"><!--fullpage-numbering-->3/3</p>
-                    </div>
-                    <div class="img-area"></div>
+            <div id="section4">
+                <div class="section-title">
+                    <h3>다양한 분야의 전문 제조사</h3>
+                    <span>더보기 +</span>
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            <div class="thumb-wrap one">
+                                <a href="javascript:void[0]">
+                                    <div class="thumb-up">
+                                        <!--이미지를 백그라운드로 넣기-->
+                                        <span>제조공정</span>
+                                        <span class="heart-icon"><!--아이콘 넣기--></span>
+                                        <!--<img src="../images/mo_manufacturer_thumb_01.svg" alt="지엔브이코스메틱(주)">-->
+                                    </div>
+                                    <div class="company-thumb">
+                                        <img src="../images/mo_com_thumb_01.svg" alt="지엔브이코스메틱(주)">
+                                    </div>
+                                    <div class="thumb-down">
+                                        <!--여기는 배경색 white로-->
+                                        <p class="thumb-title">지엔브이코스메틱(주)</p>
+                                        <p>미래차로 인류의 행복을 높이는데 기여 지엔</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumb-wrap-two">
+                                <a href="javascript:void[0]">
+                                    <div class="thumb-up">
+                                        <!--이미지를 백그라운드로 넣기-->
+                                        <span>사출</span>
+                                        <span class="heart-icon"><!--아이콘 넣기--></span>
+                                        <!--<img src="../images/mo_manufacturer_thumb_01.svg" alt="지엔브이코스메틱(주)">-->
+                                    </div>
+                                    <div class="company-thumb">
+                                        <img src="../images/mo_com_thumb_02.svg" alt="지엔브이코스메틱(주)">
+                                    </div>
+                                    <div class="thumb-down">
+                                        <!--여기는 배경색 white로-->
+                                        <p class="thumb-title">비알티씨</p>
+                                        <small>미래 자동차로 인류의 자존감을 높이다</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumb-wrap">
+                                <a href="javascript:void[0]">
+                                    <div class="thumb-up">
+                                        <!--이미지를 백그라운드로 넣기-->
+                                        <span>신용품</span>
+                                        <span class="heart-icon"><!--아이콘 넣기--></span>
+                                        <!--<img src="../images/mo_manufacturer_thumb_01.svg" alt="지엔브이코스메틱(주)">-->
+                                    </div>
+                                    <!--<div class="company-thumb">
+                                        <img src="../images/mo_com_thumb_03.svg" alt="지엔브이코스메틱(주)">
+                                    </div>-->
+                                    <div class="thumb-down">
+                                        <!--여기는 배경색 white로-->
+                                        <p class="thumb-title">마약도시락통</p>
+                                        <p>제품에 대한 설명 좀 줄어들듯?!</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="thumb-wrap">
+                                <a href="javascript:void[0]">
+                                    <div class="thumb-up">
+                                        <!--이미지를 백그라운드로 넣기-->
+                                        <span>모바일기기</span>
+                                        <span class="heart-icon"><!--아이콘 넣기--></span>
+                                        <!--<img src="../images/mo_manufacturer_thumb_01.svg" alt="지엔브이코스메틱(주)">-->
+                                    </div>
+                                    <!--<div class="company-thumb">
+                                        <img src="../images/mo_com_thumb_04.svg" alt="지엔브이코스메틱(주)">
+                                    </div>-->
+                                    <div class="thumb-down">
+                                        <!--여기는 배경색 white로-->
+                                        <p class="thumb-title">신형 3D프린터디</p>
+                                        <p>한줄 들어갔을때 요럿</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <!-- //section4 -->
 
-            <!-- section5 -->
-            <div id="section5" class="section fp-auto-height fp-auto-height-responsive">
+            <div id="section5">
+                <div class="section-title">
+                    <h3>공지사항</h3>
+                    <span>더보기 +</span>
+                </div>
+                <table>
+                    <tbody>
+                    <tr>
+                        <!--텍스트 말줄입표처리(text-overflow:ellipsis)-->
+                        <td><div>I-Mate(인천 제조기술 연계 플랫폼) 공급자 공지사항</div></td>
+                        <td><div>I-Mate 공급자 DB 삭제 요청 후 사업참여 공지사항</div></td>
+                        <td><div>I-Mate 활용, 제품 제작 부담금 및 매출채권 공지사항</div></td>
+                        <td><div>I-Mate 공급자 정보 업데이트 안내(첨부파일) 공지사항</div></td>
+                        <td><div>I-Mate 웹사이트, 모바일 웹& 어플리케이션 공지사항</div></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--// section5 -->
+
+            <div id="section6">
+                <div class="section-title">
+                    <h3>이용후기</h3>
+                    <span>더보기 +</span>
+                </div>
+                <div class="swiper use-review">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="javascript:void[0]">
+                            <div>
+                                <p>지은이가 아이메이트?</p>
+                                <p>후기후기후기후기후기후기후기</p>
+                            </div>
+                                <div>
+                                    <img src="../images/mo_review_img.svg" alt="이용후기썸네일">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void[0]">
+                                <div>
+                                    <p>지은이가 아이메이트?</p>
+                                    <p>후기후기후기후기후기후기후기</p>
+                                </div>
+                                <div>
+                                    <img src="../images/mo_review_img.svg" alt="이용후기썸네일">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:void[0]">
+                                <div>
+                                    <p>지은이가 아이메이트?</p>
+                                    <p>후기후기후기후기후기후기후기</p>
+                                </div>
+                                <div>
+                                    <img src="../images/mo_review_img.svg" alt="이용후기썸네일">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <!--페이지네이션 모양 잡기-->
+                </div>
+            </div>
+            <!--//section6-->
+
+            <div id="section7">
+                <div class="section-title">
+                    <h3>아이메이트 관계사</h3>
+                </div>
+                <div class="swiper">
+                    auto로 흘러가지 않고, 스크롤로 흘러갈수 있도록 하기
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="../images/mo_incheon_logo.svg" alt="인천광역시 로고">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../images/mo_itp_logo.svg" alt="인천테크노파크 로고">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../images/mo_incheondesign_logo.svg" alt="인천디자인 로고">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--//section7-->
+
+            
+            
+            <div id="section8">
                 <!-- footer -->
 
                 <footer id="moFooter">
                     <nav>
-                        <li><a href="javascript:void(0)">개인정보취급방침</a></li>
-                        <li><a href="javascript:void(0)">이용약관</a></li>
-                        <li><a href="javascript:void(0)">고객센터</a></li>
+                        <li><a href="javascript:void[0]">공지사항</a></li>
+                        <li><a href="javascript:void[0]">이용약관</a></li>
+                        <li><a href="javascript:void[0]">개인정보처리방침</a></li>
+                        <li><a href="javascript:void[0]">이메일수집거부</a></li>
                     </nav>
-                    <address>
-                        <div>
-                            <span>사업자등록번호: 159-09-00697</span>
-                            <span>대표: 정혜윤</span>
+                    <div class="spBet">
+                        <img src="../images/mo_gray_logo.svg" alt="아이메이트 푸터로고">
+                        <div class="sns-icon">
+                            <ul>
+                                <li><a href="javascript:void[0]"><!--<img src="../images/mo_footer_facebook.svg">--></a></li>
+                                <li><a href="javascript:void[0]"><!--<img src="../images/mo_footer_instargram.svg">--></a></li>
+                                <li><a href="javascript:void[0]"><!--<img src="../images/mo_footer_youtube.svg">--></a></li>
+                                <li><a href="javascript:void[0]"><!--<img src="../images/mo_footer_snsb.svg">--></a></li>
+<!--                                이미지로 넣을지 백그라운드로 넣을지 (백그라운드로 넣는 이유:기존의 코드들이 그랬기 때문에 어떤게 나은지 질문ㄱ)-->
+                            </ul>
                         </div>
-                        <span>주소: 경기도 하남시 미사강변동로 미사 푸르지오시티 125, 705호</span>
-                    </address>
-                    <span class="copyright">Copyright &copy; Bro consulting group, All Rights Reserced.</span>
-                    <div class="sns-link">
-                        <a href="javascript:void(0)" class="instagram"></a>
-                        <a href="javascript:void(0)" class="blog"></a>
+
+
                     </div>
-                    <h1 class="logo"><a href="javascript:void(0)"><img src="../images/logo_wide_1.svg" alt="꽃그리는아이 로고"></a>
-                    </h1>
+                    <address>
+                        <!--기본값으로 이탤릭체이므로 바꾸기-->
+                        <div>
+                            <span>인천광역시 연수구 갯벌로 12(연수구 송도동 7-50)</span>
+                            <span>인천테크노파크 중소기업지원센터</span>
+                            <span>대표전화 : 032-260-0628-9</span>
+                            <span>팩스 : 032-260-0891</span>
+                            <span>이메일 : text@admin.org</span>
+                        </div>
+                    </address>
+                    <span class="copyright">Copyright &copy; 2022 imate.or.kr, All Rights reserced.</span>
+
+                    <!--<h1 class="logo">
+                        <a href="javascript:void(0)"><img src="../images/logo_wide_1.svg" alt=""></a>
+                    </h1>-->
                 </footer>
                 <!-- //footer -->
             </div>
@@ -138,5 +323,20 @@
     </main>
     <!-- //main -->
 </div>
+<script>
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters,
+        loop: true,
+        autoplay:true,
+        speed:2000,
+    });
+
+    // const swiper = new Swiper('.none-auto', {
+    //     // Optional parameters,
+    //     loop: true,
+    // });
+
+
+</script>
 </body>
 </html>
