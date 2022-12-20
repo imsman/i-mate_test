@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+@import "font.css";
+@import "reset.css";
+@import "jquery.fullPage.css";
+@import "swiper-bundle.min.css";
+@import "m_style.css";
+
+
+
+.section .inner {width: 100%; margin-top:9rem;}
+#section1 .main-bg {width: 39rem; height: 38rem;}
+#section1 .main-bg .img01 {background-size: 33rem;}
+#section1 .main-bg .img02 {background-size: 36rem;background-position: left 1.5rem top -3rem;}
+#section1 .main-bg .img03 {background-size: 31rem;background-position: right -2rem bottom 1rem;}
+/*.main-full{height:unset;}*/
+
+.section.flex .inner {max-width: unset; flex-direction: column-reverse; padding: 0 3vh; justify-content: flex-end;}
+.img-area {width: 100%; height: 34.4rem;}
+#section2 .img-area {width: 100%;}
+#section2 .img-area img {width: 100%; height: 100%; object-fit: contain;}
+.txt-area {margin-top:3vh; text-align: center;}
+.txt-area .title {font-size: 2.2rem; margin-bottom: 1rem;}
+.txt-area p {font-size: 1.4rem; line-height: 2.4rem;}
+.txt-area .more-btn {color: #362F24;}
+.arrow.mo.first{display:inline-block; width:4rem; height:4rem; margin-top:10vh;}
+.arrow.mo{display:inline-block; width:4rem; height:4rem; margin:0 auto 6vh;}
+.txt-area p.numbering{font-size:1.4rem; color:#d9d9d9; margin:2vh 0 2rem; !important;}
+
+/*section3*/
+#section3 .img-area {background: url("../images/mo_img_main_02.svg") no-repeat center/contain;}
+#section4 .img-area {background-position: center;}
+
+
+/*m_introduce*/
+/*section6*/
+#section6 .main-bg {position: relative; width: 39rem; height: 34rem; margin-top:4rem;}
+#section6 .main-bg > div {position: absolute; width: 100%; height: 100%; left: 0; top: 0;}
+#section6 .main-bg .img01 {background: url("../images/pc_img_intro_01.svg") no-repeat center/26rem;}
+#section6 .main-bg .img02 {background: url("../images/pc_img_intro_02.svg") no-repeat center/43rem; background-position: -3rem;}
+
+/*section7*/
+#section7 .circle-area {position: relative; width: 30rem; height: 27.4rem;}
+#section7 .circle-area p {position: absolute; width: 15.8rem; border-radius: 100%; display: flex; align-items: center; justify-content: center; text-align: center; font-size:1.6rem; font-weight:500;}
+#section7 .circle-area p:after {content:''; display: block; padding-bottom: 100%;}
+#section7 .circle-area .circle01 {left: 50%; transform: translateX(-50%); top: 0; background: rgba(255, 255, 255, 0.5); z-index: 9;}
+#section7 .circle-area .circle02 {left: 0; bottom: 0; background: rgba(255, 179, 179, 0.5);}
+#section7 .circle-area .circle03 {right: 0; bottom: 0; background: rgba(198, 225, 119, 0.5);}
+#section7 h2.title{margin-top:5rem;}
+#section7 .txt-area{font-size:1.6rem;}
