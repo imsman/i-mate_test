@@ -127,3 +127,19 @@ address{margin:0 2rem; font-size:1.4rem; font-weight:400; color:#acacac; font-st
 .sns-icon ul{display:flex; justify-content: flex-start; align-items: center; margin-left:13.7rem;}
 .sns-icon ul li{margin-right:2rem;}
 .copyright{font-size:1.4rem; font-weight:400; margin:2rem 2rem 5rem; color:#acacac;}
+.content-wrap{margin:4rem 2rem 0;}
+
+/*//모바일메인페이지*/
+
+
+*{word-break: break-all;}
+
+/*03견적의뢰 5단계*/
+.request-title{margin:5.5rem 2rem 1.5rem;}
+.request-title > h1{font-size:2.2rem; font-weight:900; /*letter-spacing:-3%;*/ color:#3c4157;}
+.request-title > p{margin-top:1.5rem; font-size:1.5rem; font-weight:400; color:#777;}
+
+/*기존 itp코드는 파일질라에서 확인*/
+.step-title{font-size:1.8rem; font-weight:600; margin-bottom:3rem;}
+
+.input-wrap
