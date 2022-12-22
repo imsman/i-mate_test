@@ -69,17 +69,21 @@
                         <!--div태그로 감싼 이유= input태그 아래로 내려와있기때문에 input 창과 체크박스에 모두 블록요로 바꾸는 div로 감쌌습니다.-->
                         <div class="ch-wrap">
                             <input type="checkbox" id="chbox">
-                            <label for="chbox" class="check-box">협의가능</label>
+                            <label for="chbox" class="check-box"><span>협의가능</span></label>
                         </div>
                     </div>
 
                     <div class="budget-open">
                         <p class="mini-tit">예산 공개 여부 <span class="emphasis">*</span></p>
                         <div class="radio-flex">
-                            <input type="radio" id="openBudget" name="open">
-                            <label for="openBudget">공개</label>
-                            <input type="radio" id="closeBudget" name="open">
-                            <label for="closeBudget">비공개</label>
+                            <div class="radio-wrap">
+                                <input type="radio" id="openBudget" name="open">
+                                <label for="openBudget" class="radio-label">공개</label>
+                            </div>
+                            <div class="radio-wrap">
+                                <input type="radio" id="closeBudget" name="open">
+                                <label for="closeBudget" class="radio-label">비공개</label>
+                            </div>
                             <!--                        체크박스 뒤에 텍스트를 붙여 텍스트를 클릭해서 체크박스를 클릭한 것처럼 할 수 있도록 라벨을 뒤에 붙였습니다.-->
                         </div>
                     </div>
@@ -104,7 +108,7 @@
                     </div>
                     <div class="ch-wrap">
                         <input type="checkbox" id="chbox2">
-                        <label for="chbox2" class="check-box">협의가능</label>
+                        <label for="chbox2" class="check-box"><span>협의가능</span></label>
                     </div>
 
                     <div class="other-request">
@@ -144,7 +148,7 @@
 
                     <div class="agree">
 <!--                        label에서 체크박스 모양을 만들어보려고 했으나, 홈페이지를 확인한 결과, before 가상 선택자로 되어있다.-->
-                        <input type="checkbox" id="agree-ch">
+                        <input type="checkbox" id="agree-ch" class="hide">
                         <label for="agree-ch" class="check-box">이용약관, 개인정보처리방침, 마케팅 활용에 대한 약관에 모두 동의합니다</label>
                     </div>
 

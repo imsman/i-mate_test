@@ -157,15 +157,24 @@ address{margin:0 2rem; font-size:1.4rem; font-weight:400; color:#acacac; font-st
 .input-flex > input{width:48%; height:4.8rem;}
 .budget .input-flex{margin-bottom:1.8rem;}
 
-.ch-wrap{height:1.8rem; margin-top:2rem; margin-bottom:3rem; font-size:1.6rem; font-weight:400; display:flex; flex-wrap:nowrap; justify-content: flex-end; align-items: center;}
-.ch-wrap > input{width:1.8rem; border:1px solid #d2d2d2; height:1.8rem; margin-bottom:0; margin-right:1.2rem; padding:0;}
-.check-box{color:#777;}
+.ch-wrap{height:1.8rem; margin-top:2rem; margin-bottom:3rem; font-size:1.6rem; font-weight:400; display:flex; align-items: center; justify-content: flex-end;}
+.ch-wrap > input{display:none;}
+.ch-wrap .check-box{display:inline-block; width:8.8rem; height:1.8rem; position:relative;}
+.ch-wrap .check-box::before {position:absolute; left:-35%; top:15%; display: block; content: ''; width: 1.8rem; height: 1.8rem; border: 1px solid #D2D2D2; border-radius: 0.3rem;}
+.ch-wrap .check-box:checked::before { display: block; content: ''; width: 1.8rem; height: 1.8rem; border: 1px solid #ea4335;background:#ea4335;}
+/*.ch-wrap .check-box::before{content:''; display:inline-block; width:1.8rem; height:1.8rem; border-radius: 0.3rem; border:1px solid #d2d2d2; position:absolute; left:-3rem; top:0.3rem;}*/
+/*.ch-wrap .check-box:checked + .check-box::before{border-color:#ea4335; background: url("../images/checkbox_inner.svg") no-repeat center/cover;}*/
+.ch-wrap .check-box span{word-break: keep-all;}
 
 .budget-open{margin-bottom:3rem /*!important*/;}
 /*모든 div에 거의 2rem이 들어가서 그렇게 지정하고 각 클래스를 만들어 마진바텀높이가 다른 예산공개여부 섹션에 다른 마진을 주려고했으나 클래스명지정해서 쓰니 적용되지 않음*/
-.radio-flex{display:flex; justify-content: flex-start; align-items: center; height:1.8rem; margin-top:2.5rem;}
-.radio-flex input{width:1.8rem; height:1.8rem; border:1px solid #d2d2d2; border-radius: 0.3rem; margin-bottom:0; margin-right:1.2rem;}
-.radio-flex label{font-size:1.6rem; font-weight:400; color:#777; margin-right:3rem;}
+.radio-flex{display:flex; justify-content: flex-start; align-items: center; height:1.8rem; margin-top:2.5rem; position:relative;}
+.radio-wrap {display: flex; align-items: center; margin-right: 3rem;}
+.radio-wrap input{position: relative; width:1.8rem; height:1.8rem; margin-bottom:0; margin-right:1.2rem; appearance: none; padding: 0; background: none;}
+.radio-wrap input:after {display: block; content: ''; width: 1.8rem; height: 1.8rem; border: 1px solid #D2D2D2; border-radius: 100%;}
+.radio-wrap input:checked:after {display: block; content: ''; width: 1.8rem; height: 1.8rem; border: 1px solid #ea4335; border-radius: 100%;}
+.radio-wrap input:checked:before {position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); display: block; content: ''; width: 1.2rem; height: 1.2rem; background: #ea4335; border-radius: 100%; }
+
 
 .manu-amount{margin-bottom:2rem;}
 
