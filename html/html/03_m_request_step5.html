@@ -30,8 +30,8 @@
     <main id="main">
         <div id="all-wrap">
             <section class="request-title">
-<!--                섹션 자체에 클래스를 부여해서 아래 태그에 직접 css를 선택하면 태그 자체에 스타일을 부여해도 괜찮다고 판단해서 이렇게 구조를 작성했습니다.-->
-<!--                코드를 작성하다 보니 이 위치에 공통으로 들어가는 제목임을 확인하고 h1에 클래스를 붙여 페이지의 제목단에는 같은 스타일을 연결해 쓸수있도록 하려고 합니다-->
+                <!--                섹션 자체에 클래스를 부여해서 아래 태그에 직접 css를 선택하면 태그 자체에 스타일을 부여해도 괜찮다고 판단해서 이렇게 구조를 작성했습니다.-->
+                <!--                코드를 작성하다 보니 이 위치에 공통으로 들어가는 제목임을 확인하고 h1에 클래스를 붙여 페이지의 제목단에는 같은 스타일을 연결해 쓸수있도록 하려고 합니다-->
                 <h1>실시간 견적의뢰</h1>
                 <p>빠르고 간편하게 제조사를 찾으실 수 있습니다! 어떤 제조사를 추천해드릴까요?</p>
             </section>
@@ -40,13 +40,13 @@
 
                 <div class="input-wrap">
                     <div class="est-title">
-                        <p class="mini-tit">요청제목<span class="emphasis">*</span></p>
+                        <p class="mini-tit">요청제목 <span class="emphasis">*</span></p>
                         <label for="estimate"></label>
                         <input type="text" placeholder="예)(제조분야)의 (제조품) 견적 요청드립니다" id="estimate">
                     </div>
 
                     <div class="hope-product">
-                        <p class="mini-tit">제작 희망 제조품<span class="emphasis">*</span></p>
+                        <p class="mini-tit">제작 희망 제조품 <span class="emphasis">*</span></p>
                         <label for="hopeProduct"></label>
                         <input type="text" placeholder="예)커넷터 부품 완제품을 구하고 있습니다" id="hopeProduct">
                     </div>
@@ -54,86 +54,103 @@
                     <div class="pro-intro">
                         <p class="mini-tit">제조품 소재</p>
                         <label for="comProduct"></label>
-                        <input type="text" placeholder="예)커넷터 부품 완제품을 구하고 있습니다" id="comProduct">
+                        <input type="text" placeholder="예) PC,알루미늄,철" id="comProduct">
                     </div>
 
                     <div class="budget">
-                        <p class="mini-tit">추정 예산<span class="emphasis">*</span></p>
+                        <p class="mini-tit">추정 예산 <span class="emphasis">*</span></p>
                         <div class="input-flex">
-                            <label for="budget1"></label>
+                            <label for="budget1" class="hide"></label>
                             <input type="number" placeholder="숫자만 입력해주세요" id="budget1">
-                            <label for="budget2"></label>
+                            <label for="budget2" class="hide"></label>
                             <input type="number" placeholder="숫자만 입력해주세요" id="budget2">
                         </div>
-                        <div>
-                            <label for="chbox" class="check-box">협의가능</label>
+
+                        <!--div태그로 감싼 이유= input태그 아래로 내려와있기때문에 input 창과 체크박스에 모두 블록요로 바꾸는 div로 감쌌습니다.-->
+                        <div class="ch-wrap">
                             <input type="checkbox" id="chbox">
+                            <label for="chbox" class="check-box">협의가능</label>
                         </div>
                     </div>
 
                     <div class="budget-open">
-                        <label for="openBudget"></label>
-                        <input type="radio" id="openBudget" name="open"> 공개
-                        <input type="radio" id="closeBudget" name="open"> 비공개
+                        <p class="mini-tit">예산 공개 여부 <span class="emphasis">*</span></p>
+                        <div class="radio-flex">
+                            <input type="radio" id="openBudget" name="open">
+                            <label for="openBudget">공개</label>
+                            <input type="radio" id="closeBudget" name="open">
+                            <label for="closeBudget">비공개</label>
+                            <!--                        체크박스 뒤에 텍스트를 붙여 텍스트를 클릭해서 체크박스를 클릭한 것처럼 할 수 있도록 라벨을 뒤에 붙였습니다.-->
+                        </div>
                     </div>
 
-                    <div class="budget-open">
+                    <div class="manu-amount">
+                        <p class="mini-tit">제조 수량 <span class="emphasis">*</span></p>
                         <label for="amount"></label>
-                        <input type="number" id="amount" placeholder=" ">
+                        <input type="number" id="amount" placeholder="숫자만 입력해주세요">
                     </div>
 
+                    <div class="manu-range">
+                        <p class="mini-tit">제조 범위 <span class="emphasis">*</span></p>
+                        <label for="range"></label>
+                        <input type="number" id="range" placeholder="너비*높이*깊이 (단위:MM)">
+                    </div>
 
 
                     <div class="pay-date">
+                        <p class="mini-tit">납기일 <span class="emphasis">*</span></p>
                         <label for="paymentDate"></label>
-                        <input type="date" id="paymentDate">
+                        <input type="date" id="paymentDate" placeholder="날짜를 입력해주세요">
                     </div>
-                    <div>
-                        <label for="chbox2" class="check-box">협의가능</label>
+                    <div class="ch-wrap">
                         <input type="checkbox" id="chbox2">
+                        <label for="chbox2" class="check-box">협의가능</label>
                     </div>
 
                     <div class="other-request">
                         <p class="mini-tit">기타 요청사항</p>
-                        <textarea placeholder="요청사항이나 찾으시는 장비명이 있다면 상세히 입력해주세요. 요청사항을 자세하게 입력할 수록 제조사의 견적을 빠르게 받을 수 있습니다. 제조사에게 공개를 원하지 않는 정보는 제외하고 작성해 주세요"></textarea>
+                        <textarea
+                                placeholder="요청사항이나 찾으시는 장비명이 있다면 상세히 입력해주세요. 요청사항을 자세하게 입력할 수록 제조사의 견적을 빠르게 받을 수 있습니다. 제조사에게 공개를 원하지 않는 정보는 제외하고 작성해 주세요">
+                        </textarea>
+                        <!--textarea의 placeholder 글을 자동줄바꿈하는법(구글링해보기)-->
                     </div>
 
                     <!--혼다작업한 부분에서 양식 참고하기-->
                     <div class="ex-img">
                         <p class="mini-tit">예시(참고) 이미지</p>
                         <div class="image-container">
-                            <div class="img-wrap" style="width: 100px; height: 100px;">
-                                <img id="preview-image01">
-                            </div>
-                            <div class="input-wrap">
-                                <input class="input--text preview01" readonly>
-                                <label for="input-image01" class="btn--bor mL10">파일선택</label>
-                                <input style="display: block;" type="file" id="input-image01">
-                            </div>
-                            <p>* 이미지 사이즈 : 100 px * 100 px, 확장자 : png, jpg, 이미지 용량 : 100kb 이하</p>
+                            <input type="text" class="hide" id="input-img" class="hide">
+                            <label for="input-img"><img src="../images/mo_img_file_ex.svg"></label>
+<!--                            이미지에 라벨 씌워도 되는지..!-->
                         </div>
                     </div>
-                    <p>※이미지 파일은 제조사 공개 선택 시 전체 열람되오니 민감한 정보는 제외해 주시기 바랍니다</p>
+
+
+                    <p class="warning">※ 이미지 파일은 제조사 공개 선택 시 전체 열람되오니 민감한 정보는 제외해 주시기 바랍니다</p>
+
+
 
                     <div class="ex-plan">
                         <p class="mini-tit">예시(참고) 도면</p>
                         <div class="input-wrap">
-                            <input readonly>
-                            <label for="input-filename">파일선택</label>
-                            <input style="display: block;" type="file" id="input-filename">
+                            <input type="file" id="input-filename" data-placeholder="선택된 파일이 없습니다" >
+                            <!--검색 더해보기 인풋타입 파일을 넣으면 버튼이 생성된다리....-->
+                            <label for="input-filename">파일업로드</label>
                         </div>
                     </div>
-                    <div>※이미지 파일은 제조사 공개 선택 시 전체 열람되오니 민감한 정보는 제외해 주시기 바랍니다</div>
-                    <div class="input-wrap">
-                        <input class="input--text preview01" readonly>
-                        <label for="input-file" class="btn--bor mL10">파일선택</label>
-                        <input style="display: block;" type="file" id="input-file">
+
+                    <div class="warning">※ 도면(2D/3D) 파일은 견적 의뢰한 제조사에게만 공개됩니다</div>
+
+
+                    <div class="agree">
+<!--                        label에서 체크박스 모양을 만들어보려고 했으나, 홈페이지를 확인한 결과, before 가상 선택자로 되어있다.-->
+                        <input type="checkbox" id="agree-ch">
+                        <label for="agree-ch" class="check-box">이용약관, 개인정보처리방침, 마케팅 활용에 대한 약관에 모두 동의합니다</label>
                     </div>
-                    <p>※이용약관, 개인정보처리방침, 마케팅 활용에 대한 약관에 모두 동의합니다</p>
 
                     <div class="btn-wrap">
-                        <button>다음</button>
-                        <button>임시저장</button>
+                        <button class="btn-gray">다음</button>
+                        <button class="btn-blue">임시저장</button>
                     </div>
 
 
@@ -141,7 +158,64 @@
 
 
             </div>
+        </div>
+        <div id="section8">
+            <!-- footer -->
 
+            <footer id="moFooter">
+                <div class="mo_main_link">
+                    <nav>
+                        <li><a href="javascript:void[0]">공지사항</a></li>
+                        <li><a href="javascript:void[0]">이용약관</a></li>
+                        <li><a href="javascript:void[0]">개인정보처리방침</a></li>
+                        <li><a href="javascript:void[0]">이메일수집거부</a></li>
+                    </nav>
+                </div>
+                <div class="spBet">
+                    <a href="javascript:void[0]">
+                        <img src="../images/mo_gray_logo.svg" alt="아이메이트 푸터로고">
+                    </a>
+                    <div class="sns-icon">
+                        <ul>
+                            <li>
+                                <a href="javascript:void[0]">
+                                    <img src="../images/mo_footer_facebook.svg"></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void[0]">
+                                    <img src="../images/mo_footer_instargram.svg"></a>
+                            </li>
+                            <li>
+                                <a href="javascript:void[0]">
+                                    <img src="../images/mo_footer_youtube.svg"></a>
+                            </li>
+                            <li><a href="javascript:void[0]">
+                                <img src="../images/mo_footer_snsb.svg"></a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </div>
+                <address>
+                    <!--기본값으로 이탤릭체이므로 바꾸기-->
+                    <div>
+                        <p>인천광역시 연수구 갯벌로 12(연수구 송도동 7-50)<br>
+                            인천테크노파크 중소기업지원센터<br>
+                            대표전화 : 032-260-0628-9<br>
+                            팩스 : 032-260-0891<br>
+                            이메일 : text@admin.org<br>
+                        </p>
+                    </div>
+                </address>
+                <p class="copyright">Copyright &copy; 2022 imate.or.kr, All Rights reserced.</p>
+                <!--                    span으로 되지않아서 p로 해결함 span을 inline-block요소로 지정한다음 해보기-->
+
+                <!--<h1 class="logo">
+                    <a href="javascript:void(0)"><img src="../images/logo_wide_1.svg" alt=""></a>
+                </h1>-->
+            </footer>
+            <!-- //footer -->
         </div>
     </main>
     <!-- //main -->

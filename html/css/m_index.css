@@ -27,8 +27,12 @@ main .main-sec1 span{background:url("../images/mo_icon_search.svg") no-repeat ce
 main .main-sec2{margin-bottom:6.5rem;}
 .main-sec2 .swiper{width:100%; height:20rem;}
 .main-sec2 .swiper-wrapper{width:100%; height:100%;}
-.main-sec2 .swiper-slide{margin:0 1rem; width:35rem;}
-.main-sec2 .swiper-slide a{width:35rem; height:20rem; display:flex; justify-content: space-between; position:relative;}
+.main-sec2 .swiper-slide{margin:0 1rem; width:89%;}
+
+
+.main-sec2 .swiper-slide a{width:100%; height:20rem; display:flex; justify-content: space-between; position:relative;}
+
+
 .main-sec2 .swiper-slide a img:first-child{width:16.3rem; height:12.3rem; margin:2.5rem 0 0 2.5rem;}
 .main-sec2 .swiper-slide a img:nth-child(2){width:18.4rem; height:20rem; position:absolute; right:0; top:0;}
 
@@ -41,8 +45,8 @@ a.color-bg:nth-child(3){display:inline-block; background-color:#C692FA; border-r
 /*section3*/
 .main-sec3{margin:6.5rem 2rem 0;}
 div h3{font-size:2.2rem; font-weight:900; text-align:left;}
-.main-sec3 ul{display:flex; flex-direction:column; margin-top:2rem;}
-.main-sec3 ul li{margin-bottom:1.5rem;}
+.main-sec3 ul{display:flex; flex-direction:column; margin-top:2rem; width:100%;}
+.main-sec3 ul li{margin-bottom:1.5rem; width:89%}
 
 hr.line{height:1rem; width:100%; margin:4rem 0; background-color:#F5F5F8;}
 
@@ -142,4 +146,47 @@ address{margin:0 2rem; font-size:1.4rem; font-weight:400; color:#acacac; font-st
 /*기존 itp코드는 파일질라에서 확인*/
 .step-title{font-size:1.8rem; font-weight:600; margin-bottom:3rem;}
 
-.input-wrap
+.mini-tit{font-size:1.5rem; font-weight:400; color:#777; margin-bottom:1.5rem;}
+.emphasis{color:#ea4335;}
+.input-wrap > div{margin-bottom:2rem;}
+.input-wrap input{width:100%; height: 4.8rem; background-color:#f5f5f8; border-radius:0.3rem; font-size:1.5rem; font-weight:400; padding:0 1.5rem; color:#acacac;}
+.input-wrap input::placeholder{color:#acacac; font-size:1.6rem; font-weight:400;}
+.hide{display:none;}
+.input-flex{display:flex; justify-content: space-between; align-items: center;}
+/*spacebetween을 쓴 이유는 두 input 태그의 너비를 전체너비(350)에서 한 칸의 너비(170)을 비율로 계산해 넣었기 때문입니다*/
+.input-flex > input{width:48%; height:4.8rem;}
+.budget .input-flex{margin-bottom:1.8rem;}
+
+.ch-wrap{height:1.8rem; margin-top:2rem; margin-bottom:3rem; font-size:1.6rem; font-weight:400; display:flex; flex-wrap:nowrap; justify-content: flex-end; align-items: center;}
+.ch-wrap > input{width:1.8rem; border:1px solid #d2d2d2; height:1.8rem; margin-bottom:0; margin-right:1.2rem; padding:0;}
+.check-box{color:#777;}
+
+.budget-open{margin-bottom:3rem /*!important*/;}
+/*모든 div에 거의 2rem이 들어가서 그렇게 지정하고 각 클래스를 만들어 마진바텀높이가 다른 예산공개여부 섹션에 다른 마진을 주려고했으나 클래스명지정해서 쓰니 적용되지 않음*/
+.radio-flex{display:flex; justify-content: flex-start; align-items: center; height:1.8rem; margin-top:2.5rem;}
+.radio-flex input{width:1.8rem; height:1.8rem; border:1px solid #d2d2d2; border-radius: 0.3rem; margin-bottom:0; margin-right:1.2rem;}
+.radio-flex label{font-size:1.6rem; font-weight:400; color:#777; margin-right:3rem;}
+
+.manu-amount{margin-bottom:2rem;}
+
+.manu-range{margin-bottom:2rem;}
+
+.other-request textarea{font-size:1.6rem; font-weight:400; width:100%; height:13.8rem; border-radius:0.3rem; /*white-space: pre-line;*/ background-color:#f5f5f8;}
+
+.img-container .img-wrap input{width:17rem; height: 17rem; background: url("../images/mo_img_file_ex.svg") no-repeat center/cover;}
+
+.warning{font-size:1.3rem; font-weight:400; color:#ea4335; word-break: break-all; padding:1rem 1.5rem; border:1px solid #ea4335; background-color:rgba(255, 235, 237, 0.2); margin-bottom:2rem;}
+/*피그마에 있는 배경색이 진하다고 판단해서 현재 운영되는 페이지에서 배경색을 참고했습니다.*/
+
+.btn-wrap{display:flex; flex-direction:column; justify-content: flex-start;}
+.btn-gray{font-size:1.6rem; font-weight:400; color:#777; padding:1.4rem 16rem; background-color: #e9e9e9; margin-bottom:1rem;}
+.btn-blue{font-size:1.6rem; font-weight:600; color:#fff; padding:1.4rem 14rem; background-color:#596ba9; }
+.ex-plan .input-wrap{display:flex; justify-content: space-between; align-items: center;}
+.ex-plan .input-wrap input{width:68%; height:5rem; background-color: #fff; color:#acacac; font-size:1.6rem; font-weight:400;border:1px solid #e9e9e9}
+.ex-plan .input-wrap label{font-size:1.6rem; font-weight:400; padding:1.4rem 1.2rem; color:#777; border:1px solid #e9e9e9; border-radius: 0.3rem;}
+
+.agree{display:flex; justify-content: space-between; align-items:flex-start;}
+/*spacebetween으로 한 이유-> 너비가 늘어날때 각각의 위치로 자동정렬되어야하므로*/
+.agree > #agree-ch{width:1.8rem; height:1.8rem; border:1px solid #d2d2d2; margin-bottom:5.8rem; margin-right:1.2rem;}
+
+.btn-wrap{margin-bottom:8rem /*!important*/; }
