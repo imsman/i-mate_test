@@ -89,17 +89,19 @@ hr.line{height:1rem; width:100%; margin:4rem 0; background-color:#F5F5F8;}
 .thumb-up .sort{font-size:1.5rem; color:#ffffff; font-weight:500; padding:0.2rem 1rem; background-color:rgba(89, 107, 169,0.7); border-radius:3rem; display:inline-block;}
 .img-wrap2 {width: 100%; height: 35%; overflow:hidden; border-radius: 0.8rem;}
 .thumb-title{font-size:1.6rem; font-weight:600; color:#3C4157;}
-.thumb-up img{width:100%; object-fit: cover; border-radius:1rem 0 0 1rem;}
-.main-sec4 .heart-icon{width:10%; display:inline-block; flex-shrink:0;}
+.thumb-up > img{width:100%; object-fit: cover; /*border-radius:1rem 0 0 1rem*/;}
+.main-sec4 .heart-icon{width:fit-content; height:fit-content; flex-shrink:0;}
+.heart-icon img{width:100%;}
 .main-sec4 .heart-icon:nth-child(3){width:6%; height:6%; display:inline-block; flex-shrink:0;}
 
-.thumb-wrap a.company-thumb{position:absolute; left:50%; top:-50%; border:1px solid #d2d2d2; transform:translateY(-50%);}
+.thumb-wrap div.company-thumb{position:absolute; left:50%; top:50%; border:1px solid #d2d2d2; border-radius:15rem; transform:translate(-50%,-50%); background-color: white;}
+
 /*34% 내린 이유 높이58/전체높이170 = 34%*/
 /*left:36% 인 이유 58/390=14% 나머지 86%에서 2나누고 반지름인 7%빼서 36%이동시킴*/
 .company-thumb:nth-of-type(2) {background-color: white; width:5.8rem; height:5.8rem; border-radius: 5rem; display:inline-block;}
 
 .thumb-down{width:100%; background-color: white; text-align:center;}
-.thumb-down .thumb-txt{margin-top:2.7rem; margin-bottom:2.7rem;}
+.thumb-down .thumb-txt{margin:0 6%; padding:2.7rem 0;}
 .thumb-down .thumb-title{font-size:1.6rem; font-weight:600; color:#3C4157; /*letter-spacing: -3%;*/}
 .thumb-down p:last-child{font-size:1.5rem; font-weight:400; /*letter-spacing: -3%;*/}
 
@@ -130,8 +132,10 @@ hr.line{height:1rem; width:100%; margin:4rem 0; background-color:#F5F5F8;}
 .swiper-slide > a > div:first-child{display:flex; flex-direction: column; justify-content: space-between; width:51%;}
 .swiper-slide > a > div:last-child{display:flex; flex-direction: column; justify-content: space-between; width:36%;}
 .swiper-slide > a > div:first-child > p:first-child{font-size:1.6rem; font-weight:600; color:#3c4157;}
-
 .swiper-slide > a > div:first-child > p:last-child{font-size:1.5rem; font-weight:300; color:#777; word-wrap: break-word;}
+.swiper-slide .img-box{position:relative; min-width:14rem;}
+.swiper-slide .img-box > img{position:absolute; left:0; top:0; width:100%; transform:translate(-20%,-50%); min-width:14rem;}
+
 
 /*.use-review{position:relative;}*/
 .review-sec .swiper-pagination{position:inherit;}
@@ -142,16 +146,16 @@ hr.line{height:1rem; width:100%; margin:4rem 0; background-color:#F5F5F8;}
 
 /*section7*/
 .main-partner{margin:0 0 0 2rem;}
-.main-partner .partner{margin:3rem 0 8rem;}
-.main-partner .swiper-slide{width:fit-content !important;}
+.main-partner .partner{margin:3rem 0 8rem; align-items: center;}
+.main-partner .swiper-slide{width:fit-content !important; width:100%; height:100%;}
 /*.main-partner a:first-child{background:url("../images/mo_incheon_logo.svg") no-repeat center/cover; width:10.2rem;}*/
 
 
 /*footer*/
 #moFooter{}
-.mo_main_link{width:100%; height:7.4rem; background-color:#F5F5F8; padding:0 2rem;}
-.mo_main_link nav{width:100%; height:7.4rem; display:flex; align-items:center; justify-content:space-between; font-size:1.4rem; font-weight:500;}
-.spBet{margin:3.5rem 2rem 3rem; width:7.1rem; height:3rem; display:flex; justify-content: space-between; align-items: center;}
+.mo-main-link{width:100%; height:7.4rem; background-color:#F5F5F8; padding:0 2rem;}
+.mo-main-link nav{width:100%; height:7.4rem; display:flex; align-items:center; justify-content:space-between; font-size:1.4rem; font-weight:500;}
+.sp-between{margin:5%; display:flex; justify-content: space-between; align-items: center;}
 address{margin:0 2rem; font-size:1.4rem; font-weight:400; color:#acacac; font-style:normal;}
 /*footer의 address는 어느 부분에서는 공통이니까 다 같은 모양인 것을 확인하고(로그인,회원가입 제외) 푸터의 address 태그 자체에 속성을 부여했습니다*/
 .sns-icon ul{display:flex; justify-content: flex-start; align-items: center; margin-left:13.7rem;}
