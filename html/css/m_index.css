@@ -17,8 +17,13 @@ a{text-decoration: none; color:black;}
 main .main-sec1{margin-bottom:6.5rem; padding:0 2rem;}
 main .main-sec1 .search-txt{margin-bottom:2rem;}
 main .main-sec1 .search-txt p{font-size:2.2rem; font-weight:900; line-height:2.9rem;/* letter-spacing: -5%;*/ text-align:left; margin-top:5.5rem; word-break: break-word;}
-main .main-sec1 .search-input{width:100%; height:6rem; border:2px solid #3C4157; border-radius: 0.5rem; text-align:right; line-height:2rem; font-size: 1.6rem; font-weight: 400; padding:1.9rem 0; position:relative; color:#ACACAC;
-box-shadow:1.5rem 1.5rem 4rem rgba(0,0,0,0.1); }
+main .main-sec1 .search-wrap{display:flex; justify-content: flex-start; align-items: center; width: 100%; height:6rem; border:2px solid #3C4157; border-radius: 0.5rem; text-align:right; line-height:2rem; font-size: 1.6rem; font-weight: 400; padding:1.9rem 0; position:relative; color:#ACACAC; box-shadow:1.5rem 1.5rem 4rem rgba(0,0,0,0.1);}
+main .main-sec1 .search-input{width:40%; padding:1.9rem 0  1.9rem 2rem; font-size:1.6rem; margin-left:10%;}
+main .main-sec1 #searchSwiper{max-width:30%; height:2.2rem;}
+main .main-sec1 #searchSwiper .search-swiper{width:100%; height:100%; white-space:nowrap; }
+main .main-sec1 #searchSwiper .search-swiper .swiper-slide{width:100%; height:100%; flex-shrink:0; overflow:hidden; text-overflow:ellipsis;}
+
+
 main .main-sec1 button{background:url("../images/mo_icon_search.svg") no-repeat center/cover; position:absolute; right:10%; top:50%; transform:translateY(-50%); width:2rem; height:2rem;}
 /*검색아이콘 배치는 우선 퍼센트로 했지만 크기도 퍼센트로 잡아야하는지 여쭤보기*/
 
@@ -89,26 +94,22 @@ hr.line{height:1rem; width:100%; margin:4rem 0; background-color:#F5F5F8;}
 .thumb-up .sort{font-size:1.5rem; color:#ffffff; font-weight:500; padding:0.2rem 1rem; background-color:rgba(89, 107, 169,0.7); border-radius:3rem; display:inline-block;}
 .img-wrap2 {width: 100%; height: 35%; overflow:hidden; border-radius: 0.8rem;}
 .thumb-title{font-size:1.6rem; font-weight:600; color:#3C4157;}
-.thumb-up > img{width:100%; object-fit: cover; /*border-radius:1rem 0 0 1rem*/;}
+.thumb-up > img{width:100%; object-fit: contain; border-radius:2.2rem 2.2rem 0 0;}
 .main-sec4 .heart-icon{width:fit-content; height:fit-content; flex-shrink:0;}
 .heart-icon img{width:100%;}
 .main-sec4 .heart-icon:nth-child(3){width:6%; height:6%; display:inline-block; flex-shrink:0;}
 
-.thumb-wrap div.company-thumb{position:absolute; left:50%; top:50%; border:1px solid #d2d2d2; border-radius:15rem; transform:translate(-50%,-50%); background-color: white;}
 
 /*34% 내린 이유 높이58/전체높이170 = 34%*/
 /*left:36% 인 이유 58/390=14% 나머지 86%에서 2나누고 반지름인 7%빼서 36%이동시킴*/
-.company-thumb:nth-of-type(2) {background-color: white; width:5.8rem; height:5.8rem; border-radius: 5rem; display:inline-block;}
 
-.thumb-down{width:100%; background-color: white; text-align:center;}
+.thumb-down{width:100%; min-height:11.6rem; background-color: white; text-align:center; border-radius: 0 0 2.2rem 2.2rem; overflow:hidden;}
 .thumb-down .thumb-txt{margin:0 6%; padding:2.7rem 0;}
 .thumb-down .thumb-title{font-size:1.6rem; font-weight:600; color:#3C4157; /*letter-spacing: -3%;*/}
 .thumb-down p:last-child{font-size:1.5rem; font-weight:400; /*letter-spacing: -3%;*/}
+.thumb-wrap div.company-thumb{position:absolute; left:50%; top:50%; border:1px solid #d2d2d2; border-radius:15rem; transform:translate(-50%,-50%); background-color: white;}
+/*.company-thumb:nth-of-type(2) {background-color: white; !*width:5.8rem; height:5.8rem; *!border-radius: 5rem; display:inline-block;}*/
 
-/*.thumb-up:nth-child(2){width:100%; height:44%; background:url("../images/mo_manufacturer_thumb_02.svg") no-repeat center/cover;}
-.thumb-up:nth-child(3){width:100%; height:44%; background:url("../images/mo_manufacturer_thumb_03.svg") no-repeat center/cover;}
-.thumb-up:nth-child(4){width:100%; height:44%; background:url("../images/mo_manufacturer_thumb_04.svg") no-repeat center/cover;}*/
-/*왜 썸네일 화면이 안바뀌는지 확인하기*/
 
 
 /*section5*/
@@ -119,7 +120,9 @@ hr.line{height:1rem; width:100%; margin:4rem 0; background-color:#F5F5F8;}
 .noti-table tbody tr{display:flex; justify-content: space-between; align-items:center;}
 .noti-table tr .td-txt{width:100%; font-size:1.5rem; font-weight:400; color:#3C4157; border-bottom:1px solid #E9E9E9;
     padding:1.5rem 0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
-.noti-table tr .td-txt div{width:100%;display:flex; justify-content: space-between; align-items: center; flex-wrap:nowrap;}
+.noti-table tr .td-txt div{width:100%;display:flex; justify-content: space-between; align-items: center; flex-wrap:nowrap; }
+.noti-table tr .td-txt a{max-width:24rem; overflow:hidden; text-overflow:ellipsis; position:relative;}
+.noti-table tr .td-txt .red-point::after{content:''; width:0.5rem; height:0.5rem; display:inline-block; background-color: red; border-radius: 100%; position:absolute; right:0; top:0;}
 .noti-table .mini-date{font-size:1.3rem; font-weight:300; color:#777;}
 /*말줄임표 처리하기*/
 
@@ -163,10 +166,10 @@ hr.line{height:1rem; width:100%; margin:4rem 0; background-color:#F5F5F8;}
 
 
 /*footer*/
-#moFooter{}
+#moFooter{margin-top:8rem;}
 .mo-main-link{width:100%; height:7.4rem; background-color:#F5F5F8; padding:0 2rem;}
 .mo-main-link nav{width:100%; height:7.4rem; display:flex; align-items:center; justify-content:space-between; font-size:1.4rem; font-weight:500;}
-.sp-between{margin:5%; display:flex; justify-content: space-between; align-items: center;}
+.sp-between{padding:5%; display:flex; justify-content: space-between; align-items: center; margin-top:3.5rem;}
 address{margin:0 2rem; font-size:1.4rem; font-weight:400; color:#acacac; font-style:normal;}
 /*footer의 address는 어느 부분에서는 공통이니까 다 같은 모양인 것을 확인하고(로그인,회원가입 제외) 푸터의 address 태그 자체에 속성을 부여했습니다*/
 .sns-icon ul{display:flex; justify-content: flex-start; align-items: center; margin-left:13.7rem;}
@@ -183,6 +186,9 @@ address{margin:0 2rem; font-size:1.4rem; font-weight:400; color:#acacac; font-st
 .request-title{margin:5.5rem 2rem 1.5rem;}
 .request-title > h1{font-size:2.2rem; font-weight:900; /*letter-spacing:-3%;*/ color:#3c4157;}
 .request-title > p{margin-top:1.5rem; font-size:1.5rem; font-weight:400; color:#777;}
+
+.agree label:before{ content:''; width:1.8rem; height:1.8rem; border:1px solid #d2d2d2; border-radius: 0.3rem; display:inline-block; margin-right:1.2rem;}
+.agree label{ font-size:1.6rem; font-weight:400; color:#777777;}
 
 /*기존 itp코드는 파일질라에서 확인*/
 .step-title{font-size:1.8rem; font-weight:600; margin-bottom:3rem;}
@@ -238,13 +244,39 @@ address{margin:0 2rem; font-size:1.4rem; font-weight:400; color:#acacac; font-st
 .agree{display:flex; justify-content: space-between; align-items:flex-start;}
 /*spacebetween으로 한 이유-> 너비가 늘어날때 각각의 위치로 자동정렬되어야하므로*/
 .agree > #agree-ch{width:1.8rem; height:1.8rem; border:1px solid #d2d2d2; margin-bottom:5.8rem; margin-right:1.2rem;}
-
 .btn-wrap{margin-bottom:8rem /*!important*/;}
 
+.file-box .upload-name{width:65%;}
+.file-box label {
+    display: inline-block;
+    padding: 1.4rem 1.2rem;
+    color: #777777;
+    vertical-align: middle;
+    background-color: white;
+    cursor: pointer;
+    border:1px solid #e9e9e9;
+    border-radius:0.3rem;
+    font-size:1.6rem; font-weight:400;
+    word-break: keep-all;
+    width:30%;
+    margin-right:3%;
+    text-align:center;
+}
 
+.file-box input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+
+/*
 input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-calendar-picker-indicator {display: none; -webkit-appearance: none;}
 .pay-date input::after{width:1.7rem; height:1.7rem; background:url("../images/mo_calender_icon.svg") no-repeat center/cover;}
+*/
 
 /*04공지사항 안내리스트*/
 .notice-title{margin:5.5rem 2rem 0rem;}
@@ -273,8 +305,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {display: none; -webkit-ap
 .noti-pagination ul{display:flex; justify-content: space-between;}
 .noti-pagination ul li a{font-size:1.6rem; font-weight:500; color:#acacac; padding:0.7rem 1.3rem;}
 .noti-pagination ul li.active a{color:#575757; background-color:#f5f5f8; border-radius: 0.3rem;}
-.pre-page{background: url("../images/icon_pre_page.svg") no-repeat center/cover; width:0.5rem; height:0.7rem}
-.next-page{background: url("../images/icon_next_page.svg") no-repeat center/cover; width:0.5rem; height:0.7rem;}
+.pre-page{background: url("../images/icon_pre_page.svg") no-repeat center/cover; width:0.5rem; height:0.7rem; margin-right:3.8rem;}
+.next-page{background: url("../images/icon_next_page.svg") no-repeat center/cover; width:0.5rem; height:0.7rem;
+margin-left:3.8rem;}
 
 
 

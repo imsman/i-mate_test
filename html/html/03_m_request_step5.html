@@ -135,22 +135,19 @@
 
 
                     <div class="ex-plan">
-                        <p class="mini-tit">예시(참고) 도면</p>
-                        <div class="input-wrap">
-                            <input type="file" id="input-filename" data-placeholder="선택된 파일이 없습니다" >
-                            <!--검색 더해보기 인풋타입 파일을 넣으면 버튼이 생성된다리....-->
-                            <label for="input-filename">파일업로드</label>
+                           <p class="mini-tit">예시(참고) 도면</p>
+
+                        <div class="file-box">
+                            <input class="upload-name" value="선택된 파일이 없습니다" placeholder="선택된 파일이 없습니다">
+                            <label for="file">파일 업로드</label>
+                            <input type="file" id="file">
                         </div>
                     </div>
 
                     <div class="warning">※ 도면(2D/3D) 파일은 견적 의뢰한 제조사에게만 공개됩니다</div>
 
 
-                    <div class="agree">
-<!--                        label에서 체크박스 모양을 만들어보려고 했으나, 홈페이지를 확인한 결과, before 가상 선택자로 되어있다.-->
-                        <input type="checkbox" id="agree-ch" class="hide">
-                        <label for="agree-ch" class="check-box">이용약관, 개인정보처리방침, 마케팅 활용에 대한 약관에 모두 동의합니다</label>
-                    </div>
+
 
                     <div class="btn-wrap">
                         <button class="btn-gray">다음</button>
@@ -167,7 +164,7 @@
             <!-- footer -->
 
             <footer id="moFooter">
-                <div class="mo_main_link">
+                <div class="mo-main-link">
                     <nav>
                         <li><a href="javascript:void[0]">공지사항</a></li>
                         <li><a href="javascript:void[0]">이용약관</a></li>
@@ -175,7 +172,7 @@
                         <li><a href="javascript:void[0]">이메일수집거부</a></li>
                     </nav>
                 </div>
-                <div class="spBet">
+                <div class="sp-between">
                     <a href="javascript:void[0]">
                         <img src="../images/mo_gray_logo.svg" alt="아이메이트 푸터로고">
                     </a>
@@ -204,12 +201,12 @@
                 <address>
                     <!--기본값으로 이탤릭체이므로 바꾸기-->
                     <div>
-                        <p>인천광역시 연수구 갯벌로 12(연수구 송도동 7-50)<br>
-                            인천테크노파크 중소기업지원센터<br>
-                            대표전화 : 032-260-0628-9<br>
-                            팩스 : 032-260-0891<br>
-                            이메일 : text@admin.org<br>
-                        </p>
+                        <p>인천광역시 연수구 갯벌로 12(연수구 송도동 7-50)</p>
+                        <p>인천테크노파크 중소기업지원센터</p>
+                        <p>대표전화 : 032-260-0628-9</p>
+                        <p>팩스 : 032-260-0891</p>
+                        <p>이메일 : text@admin.org</p>
+
                     </div>
                 </address>
                 <p class="copyright">Copyright &copy; 2022 imate.or.kr, All Rights reserced.</p>
@@ -219,6 +216,7 @@
                     <a href="javascript:void(0)"><img src="../images/logo_wide_1.svg" alt=""></a>
                 </h1>-->
             </footer>
+            <!-- //footer -->
             <!-- //footer -->
         </div>
     </main>

@@ -36,10 +36,33 @@
                     <p>찾으시는 제조사 또는 서비스를 검색해보세요</p>
                     <!--                    서비스를 다음에서 줄바꿈을 하지 않으면 화면을 늘렸을 때, 밑으로 떨어지는 글자가 애매해 질 수 있어서 br태그를 넣었습니다-->
                 </div>
-                <div class="search-input">
-                    <label for="main-search"></label>
-                    <input type="text" id="main-search" placeholder="사출금형 첫 의뢰">
-                    <!--text-align오른쪽으로-->
+                <div class="search-wrap">
+                    <div class="search-input">
+                        <input type="text" class="search-word">
+                    </div>
+                    <div id="searchSwiper">
+                        <!-- Slider main container -->
+                        <div class="swiper search-swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="javascript:void[0]">
+                                        사출금형 첫 의뢰
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="javascript:void[0]">
+                                        샘플(소량 가공)
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="javascript:void[0]">
+                                        빠르고 간편하게 제조사를 찾으실 수 있습니다
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <button><!--검색 아이콘--></button>
                 </div>
             </div>
@@ -143,7 +166,7 @@
 
                                         <div class="thumb-txt">
                                             <p class="thumb-title">비알티씨</p>
-                                            <small>미래 자동차로 인류의 자존감을 높이다</small>
+                                            <p>미래차로 인류의 자존감을 높이다</p>
                                         </div>
                                     </div>
                                 </a>
@@ -208,7 +231,7 @@
                         <!--텍스트 말줄입표처리(text-overflow:ellipsis)-->
                         <td class="td-txt">
                             <div>
-                                <a href="javascript:void[0]">I-Mate(인천 제조기술 연계 플랫폼) 공급자 공지사항<sup><!--원--></sup></a>
+                                <a href="javascript:void[0]" class="red-point">I-Mate(인천 제조기술 연계 플랫폼) 공급자 공지사항 말줄임표 표시가 올바르게</a>
                                 <p class="mini-date">22.06.13</p>
 
                             </div></td>
@@ -217,7 +240,7 @@
                     <tr>
                         <td class="td-txt">
                             <div>
-                                <a href="javascript:void[0]">I-Mate(인천 제조기술 연계 플랫폼) 공급자 공지사항<sup><!--원--></sup></a>
+                                <a href="javascript:void[0]" class="red-point">I-Mate(인천 제조기술 연계 플랫폼) 공급자 공지사항</a>
                                 <p class="mini-date">22.06.13</p>
 
                             </div></td>
@@ -225,7 +248,7 @@
                     <tr>
                         <td class="td-txt">
                             <div>
-                                <a href="javascript:void[0]">I-Mate(인천 제조기술 연계 플랫폼) 공급자 공지사항<sup><!--원--></sup></a>
+                                <a href="javascript:void[0]">I-Mate(인천 제조기술 연계 플랫폼) 공급자 공지사항</a>
                                 <p class="mini-date">22.06.13</p>
 
                             </div></td>
@@ -233,7 +256,7 @@
                     <tr>
                         <td class="td-txt">
                             <div>
-                                <a href="javascript:void[0]">I-Mate(인천 제조기술 연계 플랫폼) 공급자 공지사항<sup><!--원--></sup></a>
+                                <a href="javascript:void[0]">I-Mate(인천 제조기술 연계 플랫폼) 공급자 공지사항</a>
                                 <p class="mini-date">22.06.13</p>
 
                             </div></td>
@@ -241,7 +264,7 @@
                     <tr>
                         <td class="td-txt">
                             <div>
-                                <a href="javascript:void[0]">I-Mate(인천 제조기술 연계 플랫폼) 공급자 공지사항<sup><!--원--></sup></a>
+                                <a href="javascript:void[0]">I-Mate(인천 제조기술 연계 플랫폼) 공급자 공지사항</a>
                                 <p class="mini-date">22.06.13</p>
 
                             </div></td>
@@ -419,6 +442,15 @@
 </div>
 
 <script>
+    const swiper4 = new Swiper('.search-swiper',{
+        loop:true,
+        slidesPerView:1,
+        direction:"vertical",
+        autoplay:{
+            delay:2000,
+        }
+    })
+
     const swiper1 = new Swiper('.main-banner', {
         loop: true,
         slidesPerView: 1.2,
@@ -455,10 +487,10 @@
 
     const swiper3 = new Swiper('.partner', {
         loop:true,
-        slidesPerView: 1.5,
+        slidesPerView:2.3,
         centered: true,
         draggable: true,
-        spaceBetween: 20,
+        spaceBetween:20,
         autoplay:{
             delay:2000,
         },

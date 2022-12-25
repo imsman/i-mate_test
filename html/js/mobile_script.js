@@ -10,3 +10,8 @@ $('.heart-icon img').on('click',function(){
         $(this).attr('src','../images/mo_icon_heart.svg');
     }
 });
+
+$("#file").on('change',function(){
+    var fileName = $("#file").val();
+    $(".upload-name").val(fileName);
+});
