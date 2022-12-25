@@ -177,6 +177,7 @@ address{margin:0 2rem; font-size:1.4rem; font-weight:400; color:#acacac; font-st
 .copyright{font-size:1.4rem; font-weight:400; margin:2rem 2rem 5rem; color:#acacac;}
 .content-wrap{margin:4rem 2rem 0;}
 
+
 /*//모바일메인페이지*/
 
 
@@ -280,14 +281,16 @@ input[type="date"]::-webkit-calendar-picker-indicator {display: none; -webkit-ap
 
 /*04공지사항 안내리스트*/
 .notice-title{margin:5.5rem 2rem 0rem;}
-.notice-title > h1{font-size:2.2rem; font-weight:900; color:#3c4157; margin-bottom:1.5rem; width:35rem; height:5rem;}
+.notice-title > h1{font-size:2.2rem; font-weight:900; color:#3c4157; margin-bottom:1.5rem; width:35rem;}
 .notice-title > p{font-size:1.5rem; font-weight:400; color:#777;}
 .noti-search{position:relative; margin:2rem 2rem 1.5rem;}
 .noti-search input{padding:1.4rem 1.5rem; border:1px solid #e9e9e9; width:100%;}
 .noti-search input::placeholder{font-size:1.6rem; font-weight:600; color:#acacac;}
 .noti-search > span{position:absolute; z-index:10; left:89%; top:34%;background: url("../images/mo_icon_search.svg") no-repeat center/cover; width:1.6rem; height:1.6rem;}
 
-.notice-table{border-top:2px solid #d2d2d2;}
+.notice-cont-wrap{margin:1.5rem 2rem 0;}
+
+.notice-table{border-top:2px solid #d2d2d2; width:100%;}
 .notice-table td{border-bottom:1px solid #e9e9e9;}
 .notice-table .td-top{width:100%; display:flex; flex-direction:column; justify-content: center; padding:1.5rem 0 1.7rem;}
 .noti-tit{display:flex; justify-content: flex-start; align-items:center; width:100%; margin-bottom:0.5rem;}
