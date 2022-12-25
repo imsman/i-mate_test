@@ -104,12 +104,13 @@ hr.line{height:1rem; width:100%; margin:4rem 0; background-color:#F5F5F8;}
 /*34% 내린 이유 높이58/전체높이170 = 34%*/
 /*left:36% 인 이유 58/390=14% 나머지 86%에서 2나누고 반지름인 7%빼서 36%이동시킴*/
 
-.thumb-down{width:100%; min-height:11.6rem; background-color: white; text-align:center; border-radius: 0 0 2.2rem 2.2rem; overflow:hidden;}
-.thumb-down .thumb-txt{margin:0 6%; padding:2.7rem 0;}
+.thumb-down{position:relative; width:100%; min-height:11.6rem; background-color: white; text-align:center; border-radius: 0 0 2.2rem 2.2rem; overflow:hidden;}
+.thumb-down .thumb-txt{margin:0 6%; padding:2.7rem 0; word-wrap:break-word; overflow:hidden; text-overflow:ellipsis;}
 .thumb-down .thumb-title{font-size:1.6rem; font-weight:600; color:#3C4157; /*letter-spacing: -3%;*/}
 .thumb-down p:last-child{font-size:1.5rem; font-weight:400; /*letter-spacing: -3%;*/}
-.thumb-wrap div.company-thumb{position:absolute; left:50%; top:50%; border:1px solid #d2d2d2; border-radius:15rem; transform:translate(-50%,-50%); background-color: white;}
+.thumb-wrap div.company-thumb{position:absolute; left:50%; top:0; border:1px solid #d2d2d2; border-radius:15rem; transform:translate(-50%,-50%); background-color: white;}
 /*.company-thumb:nth-of-type(2) {background-color: white; !*width:5.8rem; height:5.8rem; *!border-radius: 5rem; display:inline-block;}*/
+.thumb-wrap div.company-thumb img{z-index:10000; position:absolute; top:0; left:0; transform:translate(-50%,-50%);}
 
 
 
