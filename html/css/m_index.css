@@ -259,8 +259,8 @@ input:placeholder-shown {text-overflow: ellipsis;}
 /*.btn-wrap button{word-break: keep-all;}*/
 
 .file-box{display:flex; justify-content: space-between;}
-.file-box .upload-name{width:65%;}
-.file-box label {display: inline-block; width:10rem; padding: 1.4rem 1.2rem; color: #777777;vertical-align: middle;background-color: white;cursor: pointer;border:1px solid #e9e9e9;border-radius:0.3rem;font-size:1.6rem; font-weight:400;width:30%;max-height:4.8rem;margin-right:3%;text-align:center;
+.file-box .upload-name{width:calc(100% - 13rem);}
+.file-box label {display:flex; align-items:center; padding:0 1.2rem; color: #777777; vertical-align: middle;background-color: white;cursor: pointer;border:1px solid #e9e9e9; border-radius:0.3rem; font-size:1.6rem; font-weight:400; margin-right:3%;text-align:center;
 }
 
 /*
@@ -290,6 +290,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {display: none; -webkit-ap
 .noti-tit{display:flex; justify-content: flex-start; align-items:center; width:100%; margin-bottom:0.5rem;}
 .notice-table .td-top:hover .noti-tit p::after{content: ''; border-bottom:1px solid #3C4157; display:inline-block;}
 .noti-tit .noti-icon{font-size:1.4rem; font-weight:600; color:#fff; background-color: #596ba9; padding:0.2rem 0.7rem; border-radius:0.3rem; margin:0 1rem 0 0; min-width:4.2rem;}
+.notice-table .td-top .fix-noti{width:calc(82% - 4.2rem);}
 .noti-tit > p{font-size:1.5rem; font-weight:400; color:#3C4157; width:82%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
 .td-top ul{display:flex; justify-content: flex-start;}
 .td-top ul li{font-size:1.4rem; font-weight:400; color:#acacac;}
