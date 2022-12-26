@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
-@import "../css/font.css";
-@import "../css/reset.css";
+@import "font.css";
+@import "reset.css";
 
 /* reset */
 * {font-family: 'SpoqaHanSansNeo',sans-serif;}
@@ -55,7 +55,7 @@ a {color: #bbbbbb;}
 .page-table {overflow-x: auto; width: 100%; border: 1px solid #dddddd;}
 .page-table table {font-size: 14px; text-align: left; width: 100%; min-width: 500px; font-weight: normal; table-layout:fixed;}
 .page-table th {text-align: center;}
-.page-table td {background: #ffffff; word-wrap: break-word; white-space: pre-wrap; text-align:center;}
+.page-table td {background: #ffffff; word-wrap: break-word; white-space: pre-wrap;}
 .page-table th,.page-table td {border: 1px solid #dddddd; padding: 10px; height: auto;}
 .page-table thead th {background: #eeeeee;}
 .page-table table tr {position: relative;}
@@ -64,8 +64,9 @@ a {color: #bbbbbb;}
 .page-table td:nth-last-child(1) {text-align: center;}
 .page-table tr:last-child td:nth-last-child(1) {border-bottom: 1px solid #dddddd;}
 .page-table a {padding: 8px 4px; text-decoration: underline; color: #ffffff; background: #ab9df2; border-radius: 40px; min-width: 50px; max-width: 70px; margin: 0 auto; font-weight: 400; display: block; font-size: 12px;}
+.page-table a.ing{background: #4f4f4f;}
 .page-table td, tr {line-height: 6px;}
-    /* footer */
+/* footer */
 #footer {width: 100%; min-height: 160px; padding: 3rem 0; background: #f9f9f9; display: flex; justify-content: center; margin-top: auto;}
 .footer-wrap {width: 55%; height: 100%; display: flex; align-items: center;}
 .ft-left {padding-right: 40px; width: 286px; height: 60px;}
