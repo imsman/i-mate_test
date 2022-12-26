@@ -42,13 +42,13 @@
                     <div class="est-title">
                         <p class="mini-tit">요청제목 <span class="emphasis">*</span></p>
                         <label for="estimate"></label>
-                        <input type="text" placeholder="예)(제조분야)의 (제조품) 견적 요청드립니다" id="estimate">
+                        <input type="text" placeholder="예) (제조분야)의 (제조품) 견적 요청드립니다" id="estimate">
                     </div>
 
                     <div class="hope-product">
                         <p class="mini-tit">제작 희망 제조품 <span class="emphasis">*</span></p>
                         <label for="hopeProduct"></label>
-                        <input type="text" placeholder="예)커넷터 부품 완제품을 구하고 있습니다" id="hopeProduct">
+                        <input type="text" placeholder="예) 커넥터 부품 완제품을 구하고 있습니다" id="hopeProduct">
                     </div>
 
                     <div class="pro-intro">
@@ -113,10 +113,8 @@
 
                     <div class="other-request">
                         <p class="mini-tit">기타 요청사항</p>
-                        <textarea
-                                placeholder="요청사항이나 찾으시는 장비명이 있다면 상세히 입력해주세요. 요청사항을 자세하게 입력할 수록 제조사의 견적을 빠르게 받을 수 있습니다. 제조사에게 공개를 원하지 않는 정보는 제외하고 작성해 주세요">
-                        </textarea>
-                        <!--textarea의 placeholder 글을 자동줄바꿈하는법(구글링해보기)-->
+                        <textarea rows="4" class="txtar-txt"
+                                  placeholder="요청사항이나 찾으시는 장비명이 있다면 상세히 입력해주세요. 요청사항을 자세하게 입력할 수록 제조사의 견적을 빠르게 받을 수 있습니다. 제조사에게 공개를 원하지 않는 정보는 제외하고 작성해 주세요"></textarea>
                     </div>
 
                     <!--혼다작업한 부분에서 양식 참고하기-->
@@ -125,7 +123,6 @@
                         <div class="image-container">
                             <input type="text" class="hide" id="input-img" class="hide">
                             <label for="input-img"><img src="../images/mo_img_file_ex.svg"></label>
-<!--                            이미지에 라벨 씌워도 되는지..!-->
                         </div>
                     </div>
 
@@ -133,28 +130,34 @@
                     <p class="warning">※ 이미지 파일은 제조사 공개 선택 시 전체 열람되오니 민감한 정보는 제외해 주시기 바랍니다</p>
 
 
-
                     <div class="ex-plan">
-                           <p class="mini-tit">예시(참고) 도면</p>
+                        <p class="mini-tit">예시(참고) 도면</p>
 
                         <div class="file-box">
-                            <input class="upload-name" value="선택된 파일이 없습니다" placeholder="선택된 파일이 없습니다">
-                            <label for="file">파일 업로드</label>
-                            <input type="file" id="file">
+                            <input id="upload-file" class="upload-name" value="선택된 파일이 없습니다" placeholder="선택된 파일이 없습니다">
+                            <label for="upload-file" class="ellipsis">파일 업로드</label>
+                            <!--<input type="file" id="upload-file">
+                            <label for="upload-file">
+                                <span class="ellipsis">선택된 파일이 없습니다</span>
+                            </label>-->
                         </div>
                     </div>
 
                     <div class="warning">※ 도면(2D/3D) 파일은 견적 의뢰한 제조사에게만 공개됩니다</div>
 
-
+                    <!--약관동의 checkbox-->
+                    <div class="agree-chbox ch-wrap">
+                        <input type="checkbox" id="chbox3">
+                        <label for="chbox3" class="check-box">
+                            <p>이용약관, 개인정보처리방침, 마케팅 활용에 대한 약관에 모두 동의합니다.</p>
+                        </label>
+                    </div>
 
 
                     <div class="btn-wrap">
                         <button class="btn-gray">다음</button>
                         <button class="btn-blue">임시저장</button>
                     </div>
-
-
                 </div>
 
 
