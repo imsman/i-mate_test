@@ -38,26 +38,23 @@
             <div class="content-wrap">
                 <p class="step-title">5단계,제조 공급업체에 전달할 요청 내용을 작성해 주세요</p>
 
-                <div class="input-wrap">
-                    <div class="est-title">
-                        <p class="mini-tit">요청제목 <span class="emphasis">*</span></p>
-                        <label for="estimate"></label>
+                <div>
+                    <div class="input-wrap">
+                        <label for="estimate" class="mini-tit">요청제목 <span class="emphasis">*</span></label>
                         <input type="text" placeholder="예) (제조분야)의 (제조품) 견적 요청드립니다" id="estimate">
                     </div>
 
-                    <div class="hope-product">
-                        <p class="mini-tit">제작 희망 제조품 <span class="emphasis">*</span></p>
-                        <label for="hopeProduct"></label>
+                    <div class="input-wrap">
+                        <label for="hopeProduct" class="mini-tit">제작 희망 제조품 <span class="emphasis">*</span></label>
                         <input type="text" placeholder="예) 커넥터 부품 완제품을 구하고 있습니다" id="hopeProduct">
                     </div>
 
-                    <div class="pro-intro">
-                        <p class="mini-tit">제조품 소재</p>
-                        <label for="comProduct"></label>
+                    <div class="input-wrap">
+                        <label for="comProduct" class="mini-tit">제작 희망 제조품 <span class="emphasis">*</span></label>
                         <input type="text" placeholder="예) PC,알루미늄,철" id="comProduct">
                     </div>
 
-                    <div class="budget">
+                    <div class="budget-wrap">
                         <p class="mini-tit">추정 예산 <span class="emphasis">*</span></p>
                         <div class="input-flex">
                             <label for="budget1" class="hide"></label>
@@ -65,14 +62,13 @@
                             <label for="budget2" class="hide"></label>
                             <input type="number" placeholder="숫자만 입력해주세요" id="budget2">
                         </div>
-
-                        <!--div태그로 감싼 이유= input태그 아래로 내려와있기때문에 input 창과 체크박스에 모두 블록요로 바꾸는 div로 감쌌습니다.-->
-                        <div class="ch-wrap">
-                            <input type="checkbox" id="chbox">
-                            <label for="chbox" class="check-box"><span>협의가능</span></label>
-                        </div>
+                        <!--div태그로 감싼 이유= input태그 아래로 내려와있기때문에 input 창과 체크박스에 모두 블록요소로 바꾸는 div로 감쌌습니다.-->
                     </div>
 
+                    <div class="ch-wrap">
+                        <input type="checkbox" id="chbox1">
+                        <label for="chbox1" class="check-box"><span>협의가능</span></label>
+                    </div>
                     <div class="budget-open">
                         <p class="mini-tit">예산 공개 여부 <span class="emphasis">*</span></p>
                         <div class="radio-flex">
@@ -88,22 +84,19 @@
                         </div>
                     </div>
 
-                    <div class="manu-amount">
-                        <p class="mini-tit">제조 수량 <span class="emphasis">*</span></p>
-                        <label for="amount"></label>
+                    <div class="input-wrap">
+                        <label for="amount" class="mini-tit">제조 수량 <span class="emphasis">*</span></label>
                         <input type="number" id="amount" placeholder="숫자만 입력해주세요">
                     </div>
 
-                    <div class="manu-range">
-                        <p class="mini-tit">제조 범위 <span class="emphasis">*</span></p>
-                        <label for="range"></label>
+                    <div class="input-wrap">
+                        <label for="range" class="mini-tit">제조 범위 <span class="emphasis">*</span></label>
                         <input type="text" id="range" placeholder="너비*높이*깊이 (단위:MM)">
                     </div>
 
 
-                    <div class="pay-date">
-                        <p class="mini-tit">납기일 <span class="emphasis">*</span></p>
-                        <label for="paymentDate"></label>
+                    <div class="input-wrap">
+                        <label for="paymentDate" class="mini-tit">납기일 <span class="emphasis">*</span></label>
                         <input type="date" id="paymentDate" placeholder="날짜를 입력해주세요">
                     </div>
                     <div class="ch-wrap">
@@ -167,10 +160,10 @@
     <footer id="moFooter">
         <div class="mo-main-link">
             <nav>
-                <li><a href="javascript:void[0]">공지사항</a></li>
-                <li><a href="javascript:void[0]">이용약관</a></li>
-                <li><a href="javascript:void[0]">개인정보처리방침</a></li>
-                <li><a href="javascript:void[0]">이메일수집거부</a></li>
+                <li><a href="javascript:void(0)">공지사항</a></li>
+                <li><a href="javascript:void(0)">이용약관</a></li>
+                <li><a href="javascript:void(0)">개인정보처리방침</a></li>
+                <li><a href="javascript:void(0)">이메일수집거부</a></li>
             </nav>
         </div>
         <div class="sp-between">
@@ -180,18 +173,18 @@
             <div class="sns-icon">
                 <ul>
                     <li>
-                        <a href="javascript:void[0]">
+                        <a href="javascript:void(0)">
                             <img src="../images/mo_footer_facebook.svg"></a>
                     </li>
                     <li>
-                        <a href="javascript:void[0]">
+                        <a href="javascript:void(0)">
                             <img src="../images/mo_footer_instargram.svg"></a>
                     </li>
                     <li>
-                        <a href="javascript:void[0]">
+                        <a href="javascript:void(0)">
                             <img src="../images/mo_footer_youtube.svg"></a>
                     </li>
-                    <li><a href="javascript:void[0]">
+                    <li><a href="javascript:void(0)">
                         <img src="../images/mo_footer_snsb.svg"></a>
                     </li>
                 </ul>
